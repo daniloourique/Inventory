@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>JavaScript</title>
+<script type="text/javascript">
+    function aviao(){
+document.form1.nome2[0].checked = true;
+document.form1.nome2[1].checked = false;
+document.form1.nome2[2].checked = false;
+}
+ 
+function carro(){
+document.form1.nome2[0].checked = false;
+document.form1.nome2[1].checked = true;
+document.form1.nome2[2].checked = false;
+}
+ 
+function helicop(){
+document.form1.nome2[0].checked = false;
+document.form1.nome2[1].checked = false;
+document.form1.nome2[2].checked = true;
+}
+function chamaURL(campo) {  
+document.location.href = "http://www.teste.com.br"+campo.options[campo.selectedIndex].value;   
+}  
+</script>
+</head>
+<body>
+ 
+<form name="form1">
+Escolha sua compra:
+</br>
+Avião:<input type=radio name=nome value="a" onClick="aviao()">
+Carro:<input type=radio name=nome value="b" onClick="carro()">
+Helicóptero:<input type=radio name=nome value="c" onClick="helicop()">
+</br>
+Cor disponível:
+</br>
+Branco:<input type=checkbox name=nome2 value="a">
+Verde:<input type=checkbox name=nome2 value="c">
+Preto:<input type=checkbox name=nome2 value="b">
+ <select name="select" onChange="chamaURL(this)"> 
+<option selected>Faça sua escolha:</option>
+<option value="/teste/pagina1.html">Pagina 1</option> 
+<option value="/teste/pagina2.html">Pagina 2</option> 
+<option value="/teste/pagina3.html">Pagina 3</option> 
+<option value="/teste/pagina4.html">Pagina 4</option> 
+</select> 
+
+
+Read more: http://www.linhadecodigo.com.br/artigo/3503/configurando-funcoes-de-um-formulario-html-com-javascript.aspx#ixzz4zjG7w4X8
+</form>
+</body>
+</html>
+
+
+Read more: http://www.linhadecodigo.com.br/artigo/3503/configurando-funcoes-de-um-formulario-html-com-javascript.aspx#ixzz4zjFQwOLH

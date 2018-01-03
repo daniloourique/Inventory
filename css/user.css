@@ -1,0 +1,143 @@
+body,html {
+	height: 100%;
+	width: 100%;
+	background-color: #404040;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.homepage {
+	position: relative;
+	background-color: #404040;
+	height: 100%;
+	width: 100%;
+
+}
+
+.header {
+	position: relative;
+	margin: 0 auto;
+	background-color: #ffffff;
+	height: 200px;
+	width: 1200px;
+	top: 50px;
+}
+
+.logo {
+	position: absolute;
+	padding-top: 70px;
+	padding-left: 50px;
+}
+
+.login {
+	position: absolute;
+	float: right;
+	right: 50px;
+	top: 30px;
+}
+
+.menu {
+	background-color: #990000;
+	position: absolute;
+	float: right;
+	right: 0px;
+	top: 90px;
+	width: 700px;
+	height: 60px;
+
+}
+.menu button {
+    background-color: #990000; /* Green background */
+    border: 0px solid #990000; /* Green border */
+    color: white; /* White text */
+    padding: 0px 30px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    height: 60px;
+}
+
+.menu button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.menu:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.menu button:hover {
+    background-color: #cc0000;
+}
+
+.main {
+
+	position: relative;
+	margin: 0 auto;
+	background-color: #f2f2f2;
+	min-height: 610px;
+	height: 70%;
+	width: 1200px;
+	padding-top: 20px;
+	
+}
+
+.nova_solicitacao,.minhas_solicitacoes,.consulta_baseline,.set {
+	  display:none;
+}
+
+
+.nova_solicitacao,.set {
+	position: relative;
+	position: relative;
+	margin-top: 20px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	height: auto;
+	max-height: 560px;
+	width: 560px;
+	overflow: auto;
+	padding-bottom: 30px;
+}
+.form {
+	 width: auto;
+	 height:auto;
+	 overflow: hidden;
+	}
+div .option {
+	
+	position: relative;
+	
+	width: auto;
+
+	
+}
+
+input,select,span {
+	position: relative;
+}
+
+.title {
+	display: inline-block;
+	position: relative;
+	margin-left: 50px;
+	width: 220px;
+	margin-bottom: 5px;	
+}
+
+.option_span {
+	display:inline-block;
+	position: relative;
+	text-align: left;
+	margin-left: 0px;
+	margin-bottom: 5px;	
+}
+
+.hidden_pd,.hidden_backup_info,.hidden_selecione_so{
+	position: relative;
+	display: none;
+	margin-left: 10px;
+}

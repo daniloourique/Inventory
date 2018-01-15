@@ -29,7 +29,7 @@
             */
             for($i=0;$i<$count;$i++){
                 //echo "<br>".$data[0]['memberof'][$i];
-                if(strpos($data[0]['memberof'][$i], $G_G) !==false) {
+                if(strpos($data[0]['memberof'][$i], $G_G) !==false||strpos($data[0]['memberof'][$i],'_GRP_CAN_TI_OPERACAO') !==false){
                     $group = '1';
                     $_SESSION['user'] = $ldapuser;
                     $_SESSION['group'] = $group;
@@ -40,7 +40,7 @@
             $group = '2';
             $_SESSION['user'] = $ldapuser;
             $_SESSION['group'] = $group;
-            header('location:user.php');
+            header('location:index.php');
             exit();
         } else {echo "LDAP bind failed...";}
     }

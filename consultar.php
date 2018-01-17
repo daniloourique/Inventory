@@ -1,8 +1,6 @@
 <html>
 	<head>
 		<title></title>
-<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
-	
 	</head>
 	<body>
 		<?php
@@ -15,7 +13,6 @@
 			$result = mysqli_query($conn, $sql);
 			?>
 		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
-		<link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=6e5593ad4c5375eef5d919cfc10a0a54">
 		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap4.min.css">
@@ -31,13 +28,24 @@
 		<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
 		<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
 		<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.4/js/dataTables.fixedColumns.min.js"></script>
 
 
 		<script type="text/javascript" class="init">	
 $(document).ready(function() {
     var table = $('#consulta').DataTable( {
+    	"lengthMenu": [[20, 25, 50, -1], [10, 25, 50, "All"]],
         lengthChange: false,
-        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
+        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ],
+        
+        columnDefs: [
+            { width: '20%'}
+        ],
+        fixedColumns: true,
+        fixedColumns:   {
+            heightMatch: 'semiauto'
+
+        }
     } );
  
     table.buttons().container()
@@ -47,44 +55,44 @@ $(document).ready(function() {
 } );
 		</script>
 		<div class="table-responsive">
-			<table id='consulta' class='table table-bordered table-hover table-sm table-responsive' cellspacing='0' heigth='100%' width='100%'>
+			<table id='consulta' class='table-sm table-bordered table-hover table-sm table-responsive nowrap' cellspacing='0'>
 				<thead>
 					<tr>
-						<th> Host Name </th>
-						<th> DNS name 1 </th>
-						<th> DNS name 2 </th>
-						<th> State </th>
-						<th> Responsable </th>
-						<th> CPU </th>
-						<th> Memory </th>
-						<th> Critical </th>
-						<th> Priority </th>
-						<th> Type </th>
-						<th> Virtualization </th>
-						<th> Cluster </th>
-						<th> Business Function </th>
-						<th> Application name </th>
-						<th> Environment </th>
-						<th> Contact Team </th>
-						<th> Data center </th>
-						<th> Domain </th>
-						<th> Operating System </th>
-						<th> Time Zone </th>
-						<th> Network Adapter </th>
-						<th> MAC Address </th>
-						<th> IP Address Adapter 1 </th>
-						<th> IP Address Adapter 2 </th>
-						<th> IP Address Adapter 3 </th>
-						<th> IP Address Adapter 4 </th>
-						<th> Default Gateway </th>
-						<th> DNS Primary </th>
-						<th> DNS Secondary </th>
-						<th> SERVER MAKE </th>
-						<th> SERVER MODEL </th>
-						<th> SERVER TYPE </th>
-						<th> Console Remote Access </th>
-						<th> Service Tag (serial) </th>
-						<th> Warranty End </th>
+						<th>Host Name</th>
+						<th>DNS name 1</th>
+						<th>DNS name 2</th>
+						<th>State</th>
+						<th>Responsable</th>
+						<th>CPU</th>
+						<th>Memory</th>
+						<th>Critical</th>
+						<th>Priority</th>
+						<th>Type</th>
+						<th>Virtualization</th>
+						<th>Cluster</th>
+						<th>Business Function</th>
+						<th>Application name</th>
+						<th>Environment</th>
+						<th>Contact Team</th>
+						<th>Data center</th>
+						<th>Domain</th>
+						<th>Operating System</th>
+						<th>Time Zone</th>
+						<th>Network Adapter</th>
+						<th style="width:100%">MAC Address</th>
+						<th>IP Address Adapter 1</th>
+						<th>IP Address Adapter 2</th>
+						<th>IP Address Adapter 3</th>
+						<th>IP Address Adapter 4</th>
+						<th>Default Gateway</th>
+						<th>DNS Primary</th>
+						<th>DNS Secondary</th>
+						<th>SERVER MAKE</th>
+						<th>SERVER MODEL</th>
+						<th>SERVER TYPE</th>
+						<th>Console Remote Access</th>
+						<th>Service Tag</th>
+						<th>Warranty End</th>
 					</tr>
 				</thead>
 				<tbody>

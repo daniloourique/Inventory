@@ -11,7 +11,6 @@ $group = $_SESSION['group'];
 <!doctype html>
 <html lang="en">
 	<head>
-    <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="Danilo Ourique">
@@ -42,13 +41,13 @@ $group = $_SESSION['group'];
 
               if($group == 1) {
 					?>
-						<a class="nav-link" href="aprovacao.php">Aprovação</a>
+						<a class="nav-link" href="aprovacao.php">Aprova&ccedil;&atilde;o</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="consultar.php">Consultar</a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edição</a>
+						<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edi&ccedil;&atilde;o</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown01">
 							<a class="dropdown-item" href="form.php">Adicionar</a>
 							<a class="dropdown-item" href="alterar.php">Alterar</a>

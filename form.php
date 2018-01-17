@@ -151,7 +151,7 @@ if(isset($_POST['servidor_alterar'])){
 					     $count = count($base);
 					     for($i=0; $i<$count; $i++):
 					     	if ($base[$i]['Classe'] == "Type"):?>
-					     		<option value="<?php echo $base[$i]['Valor']?>"> <?=(isset($inventory)&&$inventory['Type'] == $base[$i]['Valor'])? 'selected':''?><?php echo $base[$i]['Valor']?></option>'
+					     		<option value="<?php echo $base[$i]['Valor']?>" <?=(isset($inventory)&&$inventory['Type'] == $base[$i]['Valor'])? 'selected':''?>><?php echo $base[$i]['Valor']?></option>'
 					     	<?php 
 					     	endif;
 					     endfor;	
@@ -356,7 +356,7 @@ if(isset($_POST['servidor_alterar'])){
 
 		</div>
 		<div class="modal-footer">
-			<button onclick="window.location.href='aprovacao.php'" class="btn btn-secondary">Cancelar</button>
+			<button onclick="window.location.href='index.php'" class="btn btn-secondary">Cancelar</button>
 			<button type="submit" value="Submit" class="btn btn-primary">Concluir</button>
 		</div>
 		<?php

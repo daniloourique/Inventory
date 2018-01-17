@@ -58,11 +58,11 @@ if(isset($_POST['servidor_alterar'])){
 			<span style="display: inline-block;">
 
 				<label for="message-text" class="col-form-label">ID*</label>
-				<input type="text" name="id" class="form-control" id="id" style="width: 100px;" required value="<?php if(isset($inventory)){echo $inventory['ID'];}?>">
+				<input type="text" name="id" class="form-control" id="id" style="width: 100px;" value="<?php if(isset($inventory)){echo $inventory['ID'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Solicitante*</label>
-				<input type="text" class="form-control" id="Solicitante" style="width: 150px;" required value="<?php if(isset($inventory)){echo $inventory['User'];}?>">
+				<input type="text" class="form-control" id="Solicitante" style="width: 150px;" value="<?php if(isset($inventory)){echo $inventory['User'];}?>">
 			</span>
 			<?php endif ?>
 			<span style="display: inline-block;">
@@ -99,19 +99,19 @@ if(isset($_POST['servidor_alterar'])){
 			</span>
 		 	<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Aplicação*</label>
-				<input type="text" name="Application_name" class="form-control" id="Aplicacao" style="width: 200px;" required value="<?php if(isset($inventory)){echo $inventory['Application Name'];}?>">
+				<input type="text" name="Application_name" class="form-control" id="Aplicacao" style="width: 200px;" value="<?php if(isset($inventory)){echo $inventory['Application Name'];}?>">
 			</span>
 		 	<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">CPU*</label>
-				<input type="text" name="CPU" class="form-control" id="CPU" style="width: 70px;" required value="<?php if(isset($inventory)){echo $inventory['CPU'];}?>">
+				<input type="text" name="CPU" class="form-control" id="CPU" style="width: 70px;" value="<?php if(isset($inventory)){echo $inventory['CPU'];}?>">
 		 	</span>
 		 	<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Memória*</label>
-				<input type="text" name="Memory" class="form-control" id="Memoria" style="width: 80px;" required value="<?php if(isset($inventory)){echo $inventory['Memory'];}?>">
+				<input type="text" name="Memory" class="form-control" id="Memoria" style="width: 80px;" value="<?php if(isset($inventory)){echo $inventory['Memory'];}?>">
 		 	</span>
 		 	<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">SO*</label>
-				<input type="text" name="SO" class="form-control" id="SO" style="width: 100px;" required value="<?php if(isset($inventory)){echo $inventory['SO'];}?>">
+				<input type="text" name="SO" class="form-control" id="SO" style="width: 100px;" value="<?php if(isset($inventory)){echo $inventory['SO'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Versão SO*</label>
@@ -175,23 +175,23 @@ if(isset($_POST['servidor_alterar'])){
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Backup*</label>
-				<textarea name="Backup" class="form-control" id="Backup"  style="width: 300px;height: 40px;" rows="1"></textarea required value="<?php if(isset($inventory)){echo $inventory['Backup'];}?>">
+				<textarea name="Backup" class="form-control" id="Backup"  style="width: 300px;height: 40px;" rows="1"></textarea value="<?php if(isset($inventory)){echo $inventory['Backup'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Contato*</label>
-				<textarea name="Contact_Team" class="form-control" id="Contact_Team" style="width: 300px;height: 40px;;" rows="1"></textarea required value="<?php if(isset($inventory)){echo $inventory['Contact Team'];}?>">
+				<textarea name="Contact_Team" class="form-control" id="Contact_Team" style="width: 300px;height: 40px;;" rows="1"></textarea value="<?php if(isset($inventory)){echo $inventory['Contact Team'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Participantes*</label>
-				<textarea name="Participantes" class="form-control" id="Participantes" style="width: 300px;height: 40px;;" rows="1"></textarea required value="<?php if(isset($inventory)){echo $inventory['Participants'];}?>">
+				<textarea name="Participantes" class="form-control" id="Participantes" style="width: 300px;height: 40px;;" rows="1"></textarea value="<?php if(isset($inventory)){echo $inventory['Participants'];}?>">
 			</span><br>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Host Name*</label>
-				<input type="text" name="Host_Name" class="form-control" id="host_name" style="width: 150px;" required value="<?php if(isset($inventory)){echo $inventory['Host Name'];}?>">
+				<input type="text" name="Host_Name" class="form-control" id="host_name" style="width: 150px;" value="<?php if(isset($inventory)){echo $inventory['Host Name'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">DNS Name 1*</label>
-				<input type="text" name="DNS_name_1" class="form-control" id="dns_name_1" style="width: 250px;" required value="<?php if(isset($inventory)){echo $inventory['DNS name 1'];}?>">
+				<input type="text" name="DNS_name_1" class="form-control" id="dns_name_1" style="width: 250px;" value="<?php if(isset($inventory)){echo $inventory['DNS name 1'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">DNS Name 2</label>
@@ -199,11 +199,11 @@ if(isset($_POST['servidor_alterar'])){
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Responsável*</label>
-				<input type="text" name="Responsable" class="form-control" id="responsable" style="width: 100px;" required value="<?php if(isset($inventory)){echo $inventory['Responsable'];}?>">
+				<input type="text" name="Responsable" class="form-control" id="responsable" style="width: 100px;" value="<?php if(isset($inventory)){echo $inventory['Responsable'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Crítico*</label>
-				<select  name="Critical" class="form-control" required value="<?php if(isset($inventory)){echo $inventory['Critical'];}?>">
+				<select  name="Critical" class="form-control" value="<?php if(isset($inventory)){echo $inventory['Critical'];}?>">
 					<option value="">Selecione</option>
 					<?php 
 					     $count = count($base);
@@ -278,7 +278,7 @@ if(isset($_POST['servidor_alterar'])){
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Time Zone*</label>
-				<input type="text" name="Time_Zone" class="form-control" id="Time_Zone" style="width: 100px;" required value="<?php if(isset($inventory)){echo $inventory['Time Zone'];}?>">
+				<input type="text" name="Time_Zone" class="form-control" id="Time_Zone" style="width: 100px;" value="<?php if(isset($inventory)){echo $inventory['Time Zone'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">DNS Primário</label>
@@ -356,19 +356,20 @@ if(isset($_POST['servidor_alterar'])){
 
 		</div>
 		<div class="modal-footer">
+			<?php
+				if(isset($inventory['ID']) == true||isset($inventory['Host Name']) == true){?>
+					<input type="hidden" name="mysql" value="update">
+			<?php 
+				} else {
+			?>
+					<input type="hidden" name="mysql" value="insert">
+			<?php
+				};
+			?>
 			<button onclick="window.location.href='index.php'" class="btn btn-secondary">Cancelar</button>
 			<button type="submit" value="Submit" class="btn btn-primary">Concluir</button>
 		</div>
-		<?php
-			if(isset($inventory['ID']) == true||isset($inventory['Host Name']) == true){?>
-				<input type="hidden" name="mysql" value="update">
-		<?php 
-			} else {
-		?>
-				<input type="hidden" name="mysql" value="insert">
-		<?php
-			};
-		?>
+
 	</form>
 	<?php include_once 'partials/footer.php' ?>
 </body>

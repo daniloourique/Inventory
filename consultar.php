@@ -5,8 +5,6 @@
 	<body>
 		<?php
 			include_once 'partials/header.php';
-					header('Content-type: text/html; charset=ISO-8859-1');
-			
 			include "mysql.php";
 			$server = '%';
 			$sql = 'SELECT * FROM Hardware WHERE `Host Name` like "'.$server.'"';

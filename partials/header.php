@@ -41,13 +41,13 @@ $group = $_SESSION['group'];
 
               if($group == 1) {
 					?>
-						<a class="nav-link" href="aprovacao.php">Aprova&ccedil;&atilde;o</a>
+						<a class="nav-link" href="aprovacao.php">Aprovação</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="consultar.php">Consultar</a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edi&ccedil;&atilde;o</a>
+						<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edição</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown01">
 							<a class="dropdown-item" href="form.php">Adicionar</a>
 							<a class="dropdown-item" href="alterar.php">Alterar</a>

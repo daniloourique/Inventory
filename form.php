@@ -31,7 +31,9 @@ if(isset($_POST['servidor_alterar'])){
 	<title>AGCO Inventory</title>
 </head>
 <body>
-	<?php include_once 'partials/header.php' ?>
+	<?php 
+		include_once 'partials/header.php' ;
+	?>
 	<main role="main" class="container">
 
 	<form action="envia.php" method="post">
@@ -356,7 +358,9 @@ if(isset($_POST['servidor_alterar'])){
 
 		</div>
 		<div class="modal-footer">
+			<input type="hidden" name="server" value=<?php echo $_POST['servidor_alterar']?>>
 			<?php
+
 				if(isset($inventory['ID']) == true||isset($inventory['Host Name']) == true){?>
 					<input type="hidden" name="mysql" value="update">
 			<?php 

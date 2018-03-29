@@ -1,5 +1,4 @@
 <?php
-header('Content-type: text/html; charset=ISO-8859-1');
 include "mysql.php";
 if(isset($_POST['id_aprov'])){
 	$ID = $_POST['id_aprov'];

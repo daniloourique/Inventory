@@ -177,15 +177,15 @@ if(isset($_POST['servidor_alterar'])){
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Backup*</label>
-				<textarea name="Backup" class="form-control" id="Backup"  style="width: 300px;height: 40px;" rows="1"></textarea value="<?php if(isset($inventory)){echo $inventory['Backup'];}?>">
+				<textarea name="Backup" class="form-control" id="Backup"  style="width: 300px;height: 40px;" rows="1"><?php if(isset($inventory)){echo $inventory['Backup'];}?></textarea>
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Contato*</label>
-				<textarea name="Contact_Team" class="form-control" id="Contact_Team" style="width: 300px;height: 40px;;" rows="1"></textarea value="<?php if(isset($inventory)){echo $inventory['Contact Team'];}?>">
+				<textarea name="Contact_Team" class="form-control" id="Contact_Team" style="width: 300px;height: 40px;;" rows="1"><?php if(isset($inventory)){echo $inventory['Contact Team'];}?></textarea>
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Participantes*</label>
-				<textarea name="Participantes" class="form-control" id="Participantes" style="width: 300px;height: 40px;;" rows="1"></textarea value="<?php if(isset($inventory)){echo $inventory['Participants'];}?>">
+				<textarea name="Participantes" class="form-control" id="Participantes" style="width: 300px;height: 40px;;" rows="1"><?php if(isset($inventory)){echo $inventory['Participantes'];}?></textarea>
 			</span><br>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Host Name*</label>
@@ -358,7 +358,7 @@ if(isset($_POST['servidor_alterar'])){
 
 		</div>
 		<div class="modal-footer">
-			<input type="hidden" name="server" value=<?php echo $_POST['servidor_alterar']?>>
+			<input type="hidden" name="server" value="<?php echo $_POST['servidor_alterar']?>">
 			<?php
 
 				if(isset($inventory['ID']) == true||isset($inventory['Host Name']) == true){?>

@@ -89,6 +89,7 @@
 			if (mysqli_query($conn, $sql_Rede)) {
 			} else {echo "Error: " . $sql_Rede . "<br>" . mysqli_error($conn);}
 		}
+		goto end;
 	}
 
 	if(isset($_POST['mysql'])&&$_POST['mysql'] == "update"){
@@ -100,7 +101,7 @@
 	if (mysqli_query($conn, $sql)) {
 	} else {echo "Error: " . $sql . "<br>" . mysqli_error($conn);}
 	mysqli_close($conn);
-
+	end:
 	?>
 	<!DOCTYPE html>
 	<html>

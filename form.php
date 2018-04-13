@@ -21,7 +21,13 @@ if(isset($_POST['servidor_alterar'])){
 	$result = mysqli_query($conn, $sql);
 	$inventory = mysqli_fetch_array($result);
 } 
-
+//    Alterar
+if(isset($_GET['servidor_alterar'])){
+	$host_name = $_GET['servidor_alterar'];
+	$sql = 'select * FROM Hardware WHERE `Host Name`="'.$host_name.'"';
+	$result = mysqli_query($conn, $sql);
+	$inventory = mysqli_fetch_array($result);
+} 
 
 
 ?>
@@ -50,7 +56,7 @@ if(isset($_POST['servidor_alterar'])){
 			</select>
 		</span>
 		<?php endif ?>
-		<?php if(isset($_POST['servidor_alterar'])):?>
+		<?php if(isset($_POST['servidor_alterar'])||isset($_GET['servidor_alterar'])):?>
 			<h5 class="modal-title" id="formLabel">Servidor <?php if(isset($inventory)){echo $inventory['Host Name'];}?></h5>
 		<?php endif ?>
 	</div>
@@ -175,6 +181,7 @@ if(isset($_POST['servidor_alterar'])){
 						?>	
 				</select>
 			</span>
+			<br>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Backup*</label>
 				<textarea name="Backup" class="form-control" id="Backup"  style="width: 300px;height: 40px;" rows="1"><?php if(isset($inventory)){echo $inventory['Backup'];}?></textarea>
@@ -284,11 +291,11 @@ if(isset($_POST['servidor_alterar'])){
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">DNS Primário</label>
-				<input type="text" name="DNS_Primary" class="form-control" id="DNS_Primary" style="width: 150px;">
+				<input type="text" name="DNS_Primary" class="form-control" id="DNS_Primary" style="width: 150px;" value="<?php if(isset($inventory)){echo $inventory['DNS Primary'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">DNS Secundario</label>
-				<input type="text" name="DNS_Secondary" class="form-control"  id="DNS_Secondary" style="width: 150px;">
+				<input type="text" name="DNS_Secondary" class="form-control"  id="DNS_Secondary" style="width: 150px;" value="<?php if(isset($inventory)){echo $inventory['DNS Secondary'];}?>">
 			</span>
 			<span style="display: inline-block;">
 				<label for="message-text" class="col-form-label">Server Make</label>
@@ -348,6 +355,10 @@ if(isset($_POST['servidor_alterar'])){
 				<label for="message-text" class="col-form-label">MAC_Address</label>
 				<input type="text" name="MAC_Address" class="form-control" id="MAC_Address" style="width: 150px;" value="<?php if(isset($inventory['MAC Address'])){echo $inventory['MAC Address'];}?>">
 			</span>
+			<span style="display: inline-block;">
+				<label for="message-text" class="col-form-label">Recovery Instructions</label>
+				<input type="text" name="Recovery_Instructions" class="form-control" id="Recovery_Instructions" style="width: 150px;" value="<?php if(isset($inventory['Recovery Instructions'])){echo $inventory['Recovery Instructions'];}?>">
+			</span>
 			<span style="display: inline-block;position: relative;margin-left: 4px;">
 				<label for="message-text" class="col-form-label">OBS:</label>
 				<textarea name="OBS" class="form-control" id="obs" rows="3" cols="400" value="<?php if(isset($inventory)){echo $inventory['OBS'];}?>"></textarea>
@@ -358,10 +369,13 @@ if(isset($_POST['servidor_alterar'])){
 
 		</div>
 		<div class="modal-footer">
-			<input type="hidden" name="server" value="<?php echo $_POST['servidor_alterar']?>">
+			<input type="hidden" name="server" value="<?php if(isset($_POST['servidor_alterar'])){echo $_POST['servidor_alterar'];}else {echo $_GET['servidor_alterar'];}?>">
 			<?php
 
-				if(isset($inventory['ID']) == true||isset($inventory['Host Name']) == true){?>
+				//if(isset($inventory['ID']) == true||isset($inventory['Host Name']) == true){
+
+				if(isset($inventory['Host Name']) == true){
+			?>
 					<input type="hidden" name="mysql" value="update">
 			<?php 
 				} else {
@@ -370,7 +384,7 @@ if(isset($_POST['servidor_alterar'])){
 			<?php
 				};
 			?>
-			<button onclick="window.location.href='index.php'" class="btn btn-secondary">Cancelar</button>
+			<button type="reset" onclick="window.location.href='consultar.php'" class="btn btn-secondary">Cancelar</button>
 			<button type="submit" value="Submit" class="btn btn-primary">Concluir</button>
 		</div>
 

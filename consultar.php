@@ -99,7 +99,7 @@ $(document).ready(function() {
 					while ($row = mysqli_fetch_array($result)) { 
 				?>
 				<tr>
-					<td><?php echo $row["Host Name"] ?></td>
+					<td><a href=form.php?servidor_alterar=<?php echo $row["Host Name"] ?>><?php echo $row["Host Name"] ?></a></td>
 					<td><?php echo $row["DNS name 1"] ?></td>
 					<td><?php echo $row["DNS name 2"] ?></td>
 					<td><?php echo $row["State"] ?></td>

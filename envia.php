@@ -37,6 +37,8 @@
 			$Service_Tag_serial = $_POST['Service_Tag_serial'];
 			$SO = $_POST['SO'];
 			$CPU = $_POST['CPU'];
+			$Core = $_POST['Core'];
+			$Socket = $_POST['Socket'];
 			$Memory = $_POST['Memory'];
 			$Backup = $_POST['Backup'];
 			$Participantes = $_POST['Participantes'];
@@ -60,6 +62,8 @@
 		$Version_SO = $_POST['Version_SO'];
 		$Memory = $_POST['Memory'];
 		$CPU = $_POST['CPU'];
+		$Core = $_POST['Core'];
+		$Socket = $_POST['Socket'];
 		$Disco = $_POST['Disco'];
 		$Medida = $_POST['Medida'];
 		$Rede = $_POST['Rede'];
@@ -69,7 +73,7 @@
 		$Priority = $_POST['Priority'];
 	
 		// Insere na tabela Fila_solicitacao as informações da Nova Solicitação
-		$sql = 'Insert into Fila_solicitacao (`Environment`, `Application Name`, `Backup`, `Business Function`, `Change`, `Contact Team`, `CPU`, `Memory`, `Participants`, `Priority`, `SO`, `Status`, `Version SO`, `User`) values ("'.$Environment.'","'.$Application_Name.'","'.$Backup.'","'.$Business_Function.'","'.$Change.'","'.$Contact_Team.'","'.$CPU.'","'.$Memory.'","'.$Participants.'","'.$Priority.'","'.$SO.'","Novo","'.$Version_SO.'","'.$user.'")';
+		$sql = 'Insert into Fila_solicitacao (`Environment`, `Application Name`, `Backup`, `Business Function`, `Change`, `Contact Team`, `CPU`, `Core`, `Socket`, `Memory`, `Participants`, `Priority`, `SO`, `Status`, `Version SO`, `User`) values ("'.$Environment.'","'.$Application_Name.'","'.$Backup.'","'.$Business_Function.'","'.$Change.'","'.$Contact_Team.'","'.$CPU.'","'.$Core.'","'.$Socket.'","'.$Memory.'","'.$Participants.'","'.$Priority.'","'.$SO.'","Novo","'.$Version_SO.'","'.$user.'")';
 		if (mysqli_query($conn, $sql)) {
 		} else {echo "Error: " . $sql . "<br>" . mysqli_error($conn);}
 		$id = mysqli_insert_id($conn);
@@ -93,10 +97,10 @@
 	}
 
 	if(isset($_POST['mysql'])&&$_POST['mysql'] == "update"){
-		$sql = 'update Hardware set `Host Name`="'.$Host_Name.'", `DNS name 1`="'.$DNS_name_1.'", `DNS name 2`="'.$DNS_name_2.'", `State`="'.$State.'", `Responsable`="'.$Responsable.'", `Critical`="'.$Critical.'", `Priority`="'.$Priority.'", `Type`="'.$Type.'", `Virtualization`="'.$Virtualization.'", `Cluster`="'.$Cluster.'", `Business Function`="'.$Business_Function.'", `Application Name`="'.$Application_name.'", `Environment`="'.$Environment.'", `Contact Team`="'.$Contact_Team.'", `Data center`="'.$Data_center.'", `Domain`="'.$Domain.'", `Version SO`="'.$Version_SO.'", `Time Zone`="'.$Time_Zone.'", `Network Adapter`="'.$Network_Adapter.'", `MAC Address`="'.$MAC_Address.'", `IP Address Adapter 1`="'.$IP_Address_Adapter_1.'", `IP Address Adapter 2`="'.$IP_Address_Adapter_2.'", `IP Address Adapter 3`="'.$IP_Address_Adapter_3.'", `IP Address Adapter 4`="'.$IP_Address_Adapter_4.'", `Default Gateway`="'.$Default_Gateway.'", `DNS Primary`="'.$DNS_Primary.'", `DNS Secondary`="'.$DNS_Secondary.'", `SERVER MAKE`="'.$SERVER_MAKE.'", `SERVER MODEL`="'.$SERVER_MODEL.'", `SERVER TYPE`="'.$SERVER_TYPE.'", `Console Remote Access`="'.$Console_Remote_Access.'", `Service Tag`="'.$Service_Tag_serial.'", `Warranty end`="'.$Warranty_end.'", `SO`="'.$SO.'", `CPU`="'.$CPU.'", `Memory`="'.$Memory.'", `Backup`="'.$Backup.'", `Participantes`="'.$Participantes.'" WHERE `Host Name`="'.$server.'"';
+		$sql = 'update Hardware set `Host Name`="'.$Host_Name.'", `DNS name 1`="'.$DNS_name_1.'", `DNS name 2`="'.$DNS_name_2.'", `State`="'.$State.'", `Responsable`="'.$Responsable.'", `Critical`="'.$Critical.'", `Priority`="'.$Priority.'", `Type`="'.$Type.'", `Virtualization`="'.$Virtualization.'", `Cluster`="'.$Cluster.'", `Business Function`="'.$Business_Function.'", `Application Name`="'.$Application_name.'", `Environment`="'.$Environment.'", `Contact Team`="'.$Contact_Team.'", `Data center`="'.$Data_center.'", `Domain`="'.$Domain.'", `Version SO`="'.$Version_SO.'", `Time Zone`="'.$Time_Zone.'", `Network Adapter`="'.$Network_Adapter.'", `MAC Address`="'.$MAC_Address.'", `IP Address Adapter 1`="'.$IP_Address_Adapter_1.'", `IP Address Adapter 2`="'.$IP_Address_Adapter_2.'", `IP Address Adapter 3`="'.$IP_Address_Adapter_3.'", `IP Address Adapter 4`="'.$IP_Address_Adapter_4.'", `Default Gateway`="'.$Default_Gateway.'", `DNS Primary`="'.$DNS_Primary.'", `DNS Secondary`="'.$DNS_Secondary.'", `SERVER MAKE`="'.$SERVER_MAKE.'", `SERVER MODEL`="'.$SERVER_MODEL.'", `SERVER TYPE`="'.$SERVER_TYPE.'", `Console Remote Access`="'.$Console_Remote_Access.'", `Service Tag`="'.$Service_Tag_serial.'", `Warranty end`="'.$Warranty_end.'", `SO`="'.$SO.'", `CPU`="'.$CPU.'", `Core`="'.$Core.'", `Socket`="'.$Socket.'", `Memory`="'.$Memory.'", `Backup`="'.$Backup.'", `Participantes`="'.$Participantes.'" WHERE `Host Name`="'.$server.'"';
 	}
 	if(isset($_POST['mysql'])&&$mysql == "insert"){
-		$sql = 'Insert into Hardware (`Host Name`, `DNS name 1`, `DNS name 2`, `State`, `Responsable`, `Critical`, `Priority`, `Type`, `Virtualization`, `Cluster`, `Business Function`, `Application Name`, `Environment`, `Contact Team`, `Data Center`, `Domain`, `Version SO`, `Time Zone`, `Network Adapter`, `MAC Address`, `IP Address Adapter 1`, `IP Address Adapter 2`, `IP Address Adapter 3`, `IP Address Adapter 4`, `Default Gateway`, `DNS Primary`, `DNS Secondary`, `SERVER MAKE`, `SERVER MODEL`, `SERVER TYPE`, `Console Remote Access`, `Service Tag`, `Warranty end`, `SO`, `CPU`, `Memory`, `Backup`, `Participantes`) values ("'.$Host_Name.'","'.$DNS_name_1.'","'.$DNS_name_2.'","'.$State.'","'.$Responsable.'","'.$Critical.'","'.$Priority.'","'.$Type.'","'.$Virtualization.'","'.$Cluster.'","'.$Business_Function.'","'.$Application_name.'","'.$Environment.'","'.$Contact_Team.'","'.$Data_center.'","'.$Domain.'","'.$Version_SO.'","'.$Time_Zone.'","'.$Network_Adapter.'","'.$MAC_Address.'","'.$IP_Address_Adapter_1.'","'.$IP_Address_Adapter_2.'","'.$IP_Address_Adapter_3.'","'.$IP_Address_Adapter_4.'","'.$Default_Gateway.'","'.$DNS_Primary.'","'.$DNS_Secondary.'","'.$SERVER_MAKE.'","'.$SERVER_MODEL.'","'.$SERVER_TYPE.'","'.$Console_Remote_Access.'","'.$Service_Tag_serial.'","'.$Warranty_end.'","'.$SO.'","'.$CPU.'","'.$Memory.'","'.$Backup.'","'.$Participantes.'")';
+		$sql = 'Insert into Hardware (`Host Name`, `DNS name 1`, `DNS name 2`, `State`, `Responsable`, `Critical`, `Priority`, `Type`, `Virtualization`, `Cluster`, `Business Function`, `Application Name`, `Environment`, `Contact Team`, `Data Center`, `Domain`, `Version SO`, `Time Zone`, `Network Adapter`, `MAC Address`, `IP Address Adapter 1`, `IP Address Adapter 2`, `IP Address Adapter 3`, `IP Address Adapter 4`, `Default Gateway`, `DNS Primary`, `DNS Secondary`, `SERVER MAKE`, `SERVER MODEL`, `SERVER TYPE`, `Console Remote Access`, `Service Tag`, `Warranty end`, `SO`, `CPU`, `Core`, `Socket`, `Memory`, `Backup`, `Participantes`) values ("'.$Host_Name.'","'.$DNS_name_1.'","'.$DNS_name_2.'","'.$State.'","'.$Responsable.'","'.$Critical.'","'.$Priority.'","'.$Type.'","'.$Virtualization.'","'.$Cluster.'","'.$Business_Function.'","'.$Application_name.'","'.$Environment.'","'.$Contact_Team.'","'.$Data_center.'","'.$Domain.'","'.$Version_SO.'","'.$Time_Zone.'","'.$Network_Adapter.'","'.$MAC_Address.'","'.$IP_Address_Adapter_1.'","'.$IP_Address_Adapter_2.'","'.$IP_Address_Adapter_3.'","'.$IP_Address_Adapter_4.'","'.$Default_Gateway.'","'.$DNS_Primary.'","'.$DNS_Secondary.'","'.$SERVER_MAKE.'","'.$SERVER_MODEL.'","'.$SERVER_TYPE.'","'.$Console_Remote_Access.'","'.$Service_Tag_serial.'","'.$Warranty_end.'","'.$SO.'","'.$CPU.'","'.$Core.'","'.$Socket.'","'.$Memory.'","'.$Backup.'","'.$Participantes.'")';
 	}
 	if (mysqli_query($conn, $sql)) {
 	} else {echo "Error: " . $sql . "<br>" . mysqli_error($conn);}

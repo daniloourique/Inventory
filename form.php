@@ -400,7 +400,26 @@ if(isset($_GET['servidor_alterar'])){
 						};
 					?>
 					<button type="reset" onclick="window.location.href='consultar.php'" class="btn btn-secondary">Cancelar</button>
-					<button type="submit" value="Submit" class="btn btn-primary">Concluir</button>
+				
+
+					<?php
+						if($group == 1){
+							?>
+							<button type="submit" value="Submit" class="btn btn-primary">Concluir</button>
+						<?php 
+						}
+						else {
+							?>
+							<button type="button" onclick="admin()" class="btn btn-primary">Concluir</button>
+							<?php
+						}
+						?>
+					<script>
+					function admin() {
+					    alert("Faça o login como administrador!");
+					}
+					</script>
+
 				</div>
 			</form>
 		</div>

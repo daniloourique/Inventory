@@ -1,6 +1,6 @@
 <?php
 include "mysql.php";
-$sql = 'select * FROM Base';
+$sql = 'select * FROM Base ORDER BY Classe, Valor';
 $query_base = mysqli_query($conn, $sql);
 while ($result = mysqli_fetch_array($query_base)){
 	$base[] = $result;
